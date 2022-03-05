@@ -1,0 +1,759 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: #6cb4b2;
+}
+.container{
+    background: #ffffff;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    padding: 80px 0;
+    border-left: 30px solid #ffffff;
+    border-right: 30px solid #ffffff;
+}
+/* main-border ------------------------------------------------------------------------------------------------------------------*/
+.main-border-wrap{
+    display: flex;
+    align-items: center;
+}
+.main-border-dots{
+    display: flex;
+}
+.main-border-dot{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.main-border-innerline{
+    border-radius: 3px;
+}
+/* vertical -----------------------------------------------------------------------------------------*/
+.border-vertical{
+    height: 100%;
+}
+.border-vertical >.main-border-dots{
+    flex-direction: column;
+}
+.border-vertical>.main-border-dots>.main-border-dot:nth-child(2){
+    margin: 8px 0;
+}
+.vertical-innerline{
+    width: 2px;
+    height: 100%;
+}
+/* horisontal ------------------------------------------------------------------------------*/
+.border-horisontal{
+    width: 100%;
+}
+.border-horisontal>.main-border-dots{
+    flex-direction: row;
+}
+.border-horisontal>.main-border-dots>.main-border-dot:nth-child(2){
+    margin: 0 8px;
+}
+.horisontal-innerline{
+    width: 100%;
+    height: 2px;
+}
+/* color -----------------------------------------------------------------------------------*/
+.border-white{
+    background: #ffffff;
+}
+.border-green{
+    background: #6cb4b2;
+}
+
+/*what page side the border takes  -------------------------------------------------------------------------------------- */
+.border-left{
+    flex-direction: column-reverse;
+    position: absolute;
+    bottom: 0px;
+    left: -10%;
+    padding-bottom: 20px;
+}
+.border-right{
+    flex-direction: column;
+    position: absolute;
+    right: -10%;
+    top: 0;
+    padding-top: 20px;
+}
+.border-top{
+    flex-direction: row;
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+}
+.border-bottom{
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+
+}
+.line-left{
+    margin-bottom: 20px;
+}
+.line-right{
+    margin-top: 20px;
+}
+.line-top{
+    margin-left: 20px;
+}
+.line-bottom{
+    margin-right: 20px;
+}
+
+/* ptofile ---P----R----O-----F----I-----L----E---------!---------------!----------------------!------------------!--------- */
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.profile-block{
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-self: flex-start;
+    justify-self: end;
+}
+/* photo */
+.profile > .photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    overflow: hidden;
+}
+.hidden-in-large{
+    display: none;
+}
+/* common */
+.profile > .photo>img{
+    display: block;
+    height: 100%;
+}
+/* -------------------------------skills---------------------------------- */
+.profile-block > .profile-title {
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+.profile-block > .text{
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+.profile-block > .text > .subtitle {
+    font-weight: 600;
+}
+/* name */
+.profile-block > .name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 84px;
+    font-weight: 900;
+    color: #6cb4b2;
+    line-height: 101px;
+    letter-spacing: 6px;
+
+}
+.profile-block > .profession {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+.link-wrap {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.link-wrap:last-child{
+    margin-bottom: 0;
+}
+.link-wrap a {
+    display: inline-block;
+    text-decoration: none;
+}
+/* hover --------------------------------------------------------hover--------------------------- */
+.link-wrap :hover  .link {
+    color: #6cb4b2;
+}
+.link-wrap :hover  .svg {
+    fill: #6cb4b2;
+}
+/* ---hover ends ----------------------------------------------------hover ends----------------*/
+.link-wrap .svg-wrap{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.link-wrap .svg-wrap svg {
+    width: 100%;
+    height: 100%
+}
+.link {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: 400;
+    font-size: 29px;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 10px;
+}
+
+/* the vertical-line of the profile section */
+.profile-vertical-line{
+    background: #6cb4b2;
+    position: absolute;
+    height: 87%;
+    width: 3px;
+    top: 82px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------- media queryes +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media (min-width: 1000px) and (max-width: 1199px){
+    .border-left{
+        left: -9%;
+    
+    }
+    .border-right{
+        right: -9%;
+    }
+    .container{
+        width: 86%;
+    }
+    .profile > .photo{
+        height: 383px;
+    }
+    /* name */
+    .profile-block > .name {
+        font-size: 74px;
+        line-height: 84px;
+        letter-spacing: 6px;
+
+    }
+    .profile-block > .profession {
+        font-size: 27px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .link-wrap {
+        margin-bottom: 15px;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-weight: 600;
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+    .profile-block > .text{
+        font-weight: 400;
+        font-size: 25px;
+    }
+}
+@media (min-width: 900px) and (max-width: 999px){
+    .border-left{
+        left: -10%;
+    
+    }
+    .border-right{
+        right: -10%;
+    }
+    .container{
+        width: 84%;
+    }
+    .profile-block{
+        margin-bottom: 36px;
+    }
+    .profile > .photo{
+        height: 360px;
+    }
+    /* name */
+    .profile-block > .name {
+        font-size: 70px;
+        line-height: 76px;
+        letter-spacing: 4px;
+
+    }
+    .profile-block > .profession {
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 29px;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 29px;
+        margin-bottom: 16px;
+    }
+    .profile-block > .text{
+        font-size: 24px;
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 15px;
+    }
+    .link-wrap .svg-wrap{
+        width: 29px;
+        height: 29px;
+    }
+    .link {
+        font-size: 22px;
+        margin-left: 9px;
+    }
+    .profile-vertical-line{
+        height: 85%;
+        
+    }
+}
+
+/* -------------------------------------------------tablets -------------------------------------------------- */
+@media (min-width: 800px) and (max-width: 899px){
+    .main-border-dot{
+        width: 20px;
+        height: 20px;
+    }
+    .border-left{
+        left: -11%;
+    
+    }
+    .border-right{
+        right: -11%;
+    }
+    .container{
+        width: 85%;
+    }
+    .profile-block{
+        margin-bottom: 32px;
+    }
+    .profile > .photo{
+        height: 310px;
+    }
+    /* name */
+    .profile-block > .name {
+        font-size: 60px;
+        line-height: 65px;
+        letter-spacing: 4px;
+
+    }
+    .profile-block > .profession {
+        font-size: 24px;
+        margin-top: 15px;
+        margin-bottom: 28px;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .profile-block > .text{
+        font-size: 23px;
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 13px;
+    }
+    .link-wrap .svg-wrap{
+        width: 27px;
+        height: 27px;
+    }
+    .link {
+        font-size: 20px;
+        margin-left: 12px;
+    }
+    .profile-vertical-line{
+        height: 83%;
+        
+    }
+}
+
+@media (min-width: 730px) and (max-width: 799px){
+    .main-border-dot{
+        width: 19px;
+        height: 19px;
+    }
+    .border-left{
+        left: -11%;
+        padding-bottom: 10px;
+    }
+    .border-right{
+        right: -11%;
+        padding-top: 10px;
+    }
+    .container{
+        width: 85%;
+    }
+    .profile-block{
+        margin-bottom: 30px;
+    }
+    .profile > .photo{
+        height: 280px;
+    }
+    /* name */
+    .profile-block > .name {
+        font-size: 56px;
+        line-height: 62px;
+        letter-spacing: 3px;
+
+    }
+    .profile-block > .profession {
+        font-size: 23px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+    .profile-block > .text{
+        font-size: 22px;
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 11px;
+    }
+    .link-wrap .svg-wrap{
+        width: 23px;
+        height: 23px;
+    }
+    .link {
+        font-size: 19px;
+        margin-left: 11px;
+    }
+    .profile-vertical-line{
+        height: 83%;
+        
+    }
+}
+@media (min-width: 620px) and (max-width: 729px){
+    .main-border-dot{
+        width: 19px;
+        height: 19px;
+    }
+    .border-left{
+        left: -12%;
+        padding-bottom: 9px;
+    }
+    .border-right{
+        right: -12%;
+        padding-top: 9px;
+    }
+    .container{
+        width: 87%;
+    }
+    .profile-block{
+        width: 45%;
+        margin-bottom: 27px;
+    }
+    .profile > .photo{
+        height: 240px;
+    }
+    /* name */
+    .profile-block > .name {
+        font-size: 46px;
+        line-height: 46px;
+        letter-spacing: 3px;
+
+    }
+    .profile-block > .profession {
+        font-size: 22px;
+        margin-top: 14px;
+        margin-bottom: 23px;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+    .profile-block > .text{
+        font-size: 21px;
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 11px;
+    }
+    .link-wrap .svg-wrap{
+        width: 21px;
+        height: 21px;
+    }
+    .link {
+        font-size: 16px;
+        margin-left: 7px;
+    }
+    /* vertical line is hidden */
+    .profile-vertical-line{
+        height: 83%;
+        width: 2px;
+    }
+}
+
+/* ------------------------------------------------------------------------------------- do not touch above this line code */
+
+@media (min-width: 501px) and (max-width: 619px){
+    .main-border-dot{
+        width: 18px;
+        height: 18px;
+    }
+    .border-left{
+        left: 7px;
+        padding-bottom: 9px;
+    }
+    .border-top{
+        top: 7px;
+        padding-left: 30px;
+    }
+    .border-bottom{
+        bottom: 10px;
+        padding-right: 30px;
+    }
+    .border-right{
+        right: 7px;
+        padding-top: 9px;
+    }
+    .border-horisontal {
+        width: 93%;
+    }
+    .border-green{
+        background: #ffffff;
+    }
+    .container{
+        width: 100%;
+        background: #6cb4b2;
+        border: none;
+        padding: 55px 44px;
+    }
+    .profile{
+        justify-content: space-around;
+    }
+    .profile-block {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .profile > .photo {
+        height: 367px;
+        width: 65%;
+        border-radius: 3px;
+        outline: 2px solid #fff;
+    }
+    .hidden-in-large{
+        display: inline-block;
+        width: 130px;
+    }
+    /* hide the horisontal name */
+    .profile-block > .name{
+        display: none;
+    }
+    /* show up the vertical name */
+    .hidden-in-large > .vertical-name {
+        font-family: 'Poppins', sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 58px;
+        letter-spacing: -30px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-transform: uppercase;
+        margin-top: -20px;
+        width: 100%;
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .link-wrap .svg-wrap{
+        width: 34px;
+        height: 34px;
+    }
+    .link-wrap .svg{
+        transition: 0.4s;
+    }
+    .link {
+        display: none;
+        transition: 1s;
+    }
+    .profile-vertical-line{
+        display: none;
+    }
+
+    .profile-block > .profession {
+        flex-basis: 100%;
+        font-size: 38px;
+        margin-top: 4px;
+        margin-bottom: 14px;
+        color: #ffffff;
+        letter-spacing: 5px;
+    }
+    /* --------------------------hover -----------------*/
+    .link-wrap :hover  .link {
+        color: #ffffff;
+    }
+    .link-wrap :hover  .svg {
+        fill: #ffffff;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 27px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+        color: #f2f2f2;
+    }
+    .profile-block > .text{
+        font-size: 21px;
+    }
+    .profile-block > .subtitle{
+        color: #6e6e6e;
+    }
+}
+/* ----------------------------------------------- smartphones */
+@media (min-width: 320px) and (max-width: 501px){
+    .main-border-dot{
+        width: 18px;
+        height: 18px;
+    }
+    .border-left{
+        left: 7px;
+        padding-bottom: 9px;
+    }
+    .border-top{
+        top: 7px;
+        padding-left: 30px;
+    }
+    .border-bottom{
+        bottom: 10px;
+        padding-right: 30px;
+    }
+    .border-right{
+        right: 7px;
+        padding-top: 9px;
+    }
+    .border-horisontal {
+        width: 93%;
+    }
+    .border-green{
+        background: #ffffff;
+    }
+    .container{
+        width: 100%;
+        background: #6cb4b2;
+        border: none;
+        padding: 55px 35px;
+    }
+    .profile{
+        justify-content: space-around;
+    }
+    .profile-block {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .profile > .photo {
+        height: 410px;
+        width: 100%;
+        border-radius: 3px;
+        outline: 2px solid #fff;
+    }
+    .hidden-in-large{
+        display: none;
+    }
+    /* hide the horisontal name */
+    .profile-block > .name{
+        display: block;
+        color: #91f0eb;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 65px;
+        letter-spacing: 6px;
+
+    }
+    /* social media */
+    .link-wrap {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .link-wrap .svg-wrap{
+        width: 46px;
+        height: 46px;
+    }
+    .link-wrap .svg{
+        transition: 0.4s;
+    }
+    .link {
+        display: none;
+        transition: 1s;
+    }
+    .profile-vertical-line{
+        display: none;
+    }
+
+    .profile-block > .profession {
+        flex-basis: 100%;
+        font-size: 35px;
+        margin-top: 23px;
+        margin-bottom: 26px;
+        color: #ffffff;
+        letter-spacing: 16px;
+    }
+    /* --------------------------hover -----------------*/
+    .link-wrap :hover  .link {
+        color: #ffffff;
+    }
+    .link-wrap :hover  .svg {
+        fill: #ffffff;
+    }
+    /* --skills */
+    .profile-block > .profile-title {
+        font-size: 38px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+        color: #f2f2f2;
+    }
+    .profile-block > .text{
+        font-size: 30px;
+    }
+    .profile-block > .subtitle{
+        color: #6e6e6e;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 420px){
+    .profile-block > .name{
+        font-size: 54px;
+        line-height: 50px;
+        letter-spacing: 3px;
+
+    }
+    .profile-block > .profession {
+        flex-basis: 100%;
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 26px;
+        color: #ffffff;
+        letter-spacing: 4px;
+    }
+}
